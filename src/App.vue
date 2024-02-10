@@ -16,7 +16,7 @@
     <div class="sidebar">
       <b-nav vertical>
           <b-nav-item  class="nav-item"
-          ><b-link to="/Juguetes" class="nav-link">
+          ><b-link to="/toys" class="nav-link">
             <b-row>
               <b-col class="p-0 d-flex justify-content-between">
                 Juguetes
@@ -27,7 +27,7 @@
 
           <b-nav-item 
           class="nav-item"
-          ><b-link :to="{ name: 'componentDos' }" class="nav-link">
+          ><b-link to="" class="nav-link">
             <b-row>
               <b-col class="m-0 p-0 d-flex justify-content-between">
                 Electrodomesticos
@@ -38,7 +38,7 @@
           </b-nav-item>
  
           <b-nav-item class="nav-item"
-          ><b-link :to="{ name: 'componentTres' }" class="nav-link"><b-row>
+          ><b-link class="nav-link"><b-row>
               <b-col class="m-0 p-0 d-flex justify-content-between">
                 Hogar
                 <b-icon icon="house-door-fill" class="icon"></b-icon>
@@ -48,7 +48,7 @@
         </b-nav>
     </div>
     <div class="content">
-      <router-view></router-view>
+      <router-view />
     </div>
   </div>  
 </template>

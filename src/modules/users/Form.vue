@@ -22,10 +22,9 @@
                                         class="mb-2 img shadow-lg"
                                         rounded="circle"
                                         @click="openPicModal()"
-                                        v-b-tooltip.right title="Da click sobre aquí para agregar una foto de perfil"
+                                        v-b-tooltip.top title="Da click aquí para agregar una foto de perfil"
                                     >
                                     </b-img>
-
                                 </b-col>
                             </b-row>
                             <b-row>
@@ -128,8 +127,9 @@
                                         <label  class="mandatory-field">Número: </label>
                                         <b-form-input
                                         id="input-number"
+                                        max-length="2"
                                         v-model="v$.user.number.$model"
-                                        type="text"
+                                        type="number"
                                         :state="v$.user.number.$dirty ? !v$.user.number.$error : null"
                                         required
                                         trim
@@ -196,7 +196,7 @@
                             </b-row>
                             <b-row>
                                 <b-col cols="12" class="text-center mt-4" >
-                                    <b-button style="background-color: #009475;" :disabled="
+                                    <b-button class="border-none" style="background-color: #009475;"  @click="saveUser()" :disabled="
                                         v$.user.name.$invalid || 
                                         v$.user.lastname.$invalid ||
                                         v$.user.zip.$invalid ||
@@ -305,6 +305,8 @@ export default {
                 showCancelButton: false,
                 showConfirmButton: false,
                 timer: 3000,
+            }).then(() =>{
+
             });
         }
     },
